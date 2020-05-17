@@ -16,3 +16,4 @@ tensorflow-probability
 tf-agents
 yfinance
 flask-ngrok
+schedule

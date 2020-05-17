@@ -29,6 +29,12 @@ def get_stock_universe_list():
         stocks = json.load(file)
     return stocks["stocks"]
 
+def get_eval_stock_list():
+    stocks = {"eval_stocks": []}
+    with open("stock_universe.json", "r") as file:
+        stocks = json.load(file)
+    return stocks["eval_stocks"]
+
 def save_live_trading_stocks_info(stocks_info):
     with open("live_trading_stocks_info.json", "w+") as file:
         file.write(json.dumps(stocks_info, sort_keys=True, indent=4))
